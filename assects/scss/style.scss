@@ -1,0 +1,426 @@
+// FONT FAMILY
+@font-face {
+    font-family: Open-Sans-Regular;
+    src: url(../font/OpenSans/OpenSans-Regular.ttf);
+}
+@font-face {
+    font-family: Open-Sans-Medium;
+    src: url(../font/OpenSans/OpenSans-Medium.ttf);
+}
+
+@font-face {
+    font-family: Open-Sans-SemiBold;
+    src: url(../font/OpenSans/OpenSans-SemiBold.ttf);
+}
+@font-face {
+    font-family: Open-Sans-Bold;
+    src: url(../font/OpenSans/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: MYRIADPRO-SEMIBOLD;
+    src: url(../font/myriadPro/MYRIADPRO-SEMIBOLD.OTF);
+}
+@font-face {
+    font-family: MYRIADPRO-REGULAR;
+    src: url(../font/myriadPro/MYRIADPRO-REGULAR.OTF);
+}
+
+// IMPORT SCSS FILES
+@import "./mixin";
+@import "./variable";
+
+// GLOBAL CSS
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+// TAG ELEMENTS
+h1, h2, h3, h4, h5, p{
+    margin: 0px;
+    padding: 0px;
+}
+img{
+    vertical-align: middle;
+}
+a{
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+li{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: Open-Sans-Regular;
+}
+
+// LAYOUT 
+.content{
+    width: $content-width;
+    margin: 0px auto;
+}
+.item{
+    width: 33.33%;
+}
+.title_header{
+    position: relative;
+    h2{
+        @include font($font-size-28, 600, $Open-Sans-SemiBold, $secend-dark-color); 
+        padding-bottom: 20px;
+    }
+    &::before{
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        width: 54px;
+        height: 2px;
+        content: '';
+        background: $main-color;
+    }
+    &::after{
+        position: absolute;
+        left: 54px;
+        bottom: 0px;
+        right: 0px;
+        height: 2px;
+        content: '';
+        background: $white;
+    }
+}
+
+// HEADER SECTION START
+.header_top{
+    @include section(#fff, 118px);
+
+    .header_top_content{
+        @extend .content;
+        height: 100%;
+        @include display-flex(space-between);
+
+        .logo{
+            width: 734px;
+            @include display-flex(start);
+            a{
+                width: 80px;
+                margin-right: 14px;
+                img{
+                    width: 100%;
+                    
+               }
+            }
+            h4{
+                @include font($font-size-25, 400, $MYRIADPRO-REGULAR, $secend-light-color);
+
+            }
+            
+        } 
+        .phone_number{
+            width: 226px;
+            p{
+                @include font($font-size-30, 400, $Open-Sans-Regular, $main-color);
+                text-align: right;
+            }
+        }
+    }
+}
+// HEADER NAV
+.main_header{
+    @include section($main-color, 50px);
+    .main_header_content{
+        @extend .content;
+        height: 100%;
+        @include display-flex(space-between);
+        nav{
+            width: 852px;
+            
+            ul{
+                @include display-flex(space-between);
+                li{
+                    a{
+                        text-transform: capitalize;
+                        @include font($font-size-16, 400, $Open-Sans-SemiBold, $white);
+                        transition: all linear .4s;
+                        @include display-flex(center);
+                        padding: 0px 13px;
+                        height: 50px;
+                        &:hover{
+                            background: #f18d26;
+                        }
+                    }
+                }
+            }
+        }
+        .header_socal_links{
+            width: 100px;
+            ul{
+                @include display-flex(space-between);
+                li{
+                    display: block;
+                    a{
+                        display: block;
+                        width: 30px;
+                        height: 30px;
+                        background: #fff;
+                        border-radius: 50%;
+                        @include display-flex(center);
+                        i{
+                            color: $main-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+// HEADER SECTION END
+
+
+// HOME SECTION START
+.home_section{
+    @include section($main-color, 400px);
+    background-image: url(../images/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    
+
+    .home_content{
+        @extend .content;
+        height: 100%;
+        @include display-flex(center);
+        flex-direction: column;
+        align-items: flex-start;
+        h2{
+            @include font($font-size-36, 400, $MYRIADPRO-SEMIBOLD, $secend-dark-color); 
+        }
+        h1{
+            @include font($main-header-font-size, 400, $MYRIADPRO-SEMIBOLD, $secend-dark-color); 
+        }
+        p{
+            width: 275px;
+            margin-bottom: 20px;
+            @include font($font-size-16, 400, $Open-Sans-Regular, $secend-dark-color); 
+        }
+        .btn{
+            display: inline-block;
+            padding: 7px 24px;
+            background:#92c7a3;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            @include font($font-size-18, 400, $Open-Sans-Regular, $white); 
+
+        }          
+    }
+}
+// HOME SECTION END
+
+
+// ABOUT SECTION START
+.about_section{
+    @include section(#fff, 442px);
+    padding: 50px 0px;
+    .about_content{
+        @extend .content;
+        height: 100%;
+        @include display-grid();
+        .about{
+            text-align: center;
+            h3{
+                padding-bottom: 20px;
+                @include font($font-size-22, 400, $MYRIADPRO-SEMIBOLD, $secend-light-color);  
+            }
+            .dep_img_area{
+                    width: 158px;
+                    height: 158px;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    margin: 0px auto;
+                img{
+                    
+                    transition: all linear .4s;
+                    
+                }
+                padding-bottom: 10px
+            }
+            p{
+                @include font($font-size-13, 400, $Open-Sans-Regular, $secend-dark-color); 
+                line-height: 1.6; 
+                padding-bottom: 20px;
+            }
+            a{
+               i{
+                  font-size: $font-size-14;
+                  color: $main-color;
+               } 
+               span{
+                @include font($font-size-14, 400, $Open-Sans-Regular, $secend-light-color); 
+                text-transform: capitalize;
+               }
+            }
+            &:hover .dep_img_area img{
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+// ABOUT SECTION END
+
+// DEPERMENT SECTION START
+.deperment_section{
+    @include section(#dfece6, 384px);
+    padding: 25px 0px;
+    .deperment_content{
+        @extend .content;
+        @include display-flex(space-between);
+        .deperment_item{
+            width: 445px;
+            .deperment_areas{
+                margin-top: 15px;
+                height: 202px;
+                .deperment_subject{
+                    @include display-flex(space-between);
+                    height: 40px;
+                    width: 100%;
+                    background: $white;
+                    border-bottom: 2px solid #5ac0cf;
+                   
+                    h4{
+                        @include font($font-size-16, 600, $Open-Sans-SemiBold, $secend-light-color); 
+                        padding-left: 15px; 
+                    }
+                    span{
+                        width: 43px;
+                        height: 38px;
+                        background: $main-color;
+                        @include display-flex(center);
+                        cursor: pointer;
+                        i{
+                            color: $white;
+                            
+                        }
+                    }
+                }&:nth-child(5){
+                    border: none !important;
+                }
+               
+            }
+            a{
+                i{
+                   font-size: $font-size-14;
+                   color: $main-color;
+                } 
+                span{
+                 @include font($font-size-14, 400, $Open-Sans-Regular, $main-color); 
+                 text-transform: capitalize;
+                }
+             }
+        }
+        .deperment_video_area{
+            width: 445px;
+            .deperment_video{
+                margin-top: 15px;
+                height: 196px;
+                background-image: url(../images/video_img.jpg);
+                position: relative;
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                border: 8px solid #fff;
+                i{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: $main-color;
+                    padding: 20px;
+                    background: #f1f1e3b4;
+                    font-size: 20px;
+                }
+            }
+        }
+          
+    }
+}
+// DEPERMENT SECTION END
+
+
+// SERVICE SECTION START
+.service_section{
+    @include section(#ffffff, 412px);
+    padding: 25px 0px;
+    .service_content{
+        @extend .content;
+        @include display-grid();
+        .service_item{
+            .title_header{
+                margin-bottom: 10px;
+               &::after{
+                   background: #eaeaea;
+               }
+            }
+            a{
+                i{
+                   font-size: $font-size-14;
+                   color: $main-color;
+                } 
+                span{
+                 @include font($font-size-14, 400, $Open-Sans-Regular, $secend-light-color); 
+                 text-transform: capitalize;
+                }
+             }
+        }
+        .event{
+            .event_text{
+                padding: 25px 0px;
+                h5{
+                    @include font($font-size-18, 600, $Open-Sans-SemiBold, $secend-dark-color); 
+                }
+                p{
+                    @include font($font-size-13, 400, $Open-Sans-Regular, $secend-light-color); 
+                }
+                
+            }
+            .border_bottom{
+                border-bottom: 1px solid #dddd;
+            }
+        }
+        .medical{
+            ul{
+                padding: 25px 0px;
+                li{
+                    padding: 5px 0px;
+                    @include font($font-size-13, 400, $Open-Sans-Regular, $secend-light-color); 
+                    i{
+                        color: $main-color;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .gallery{
+            .image_gallery{
+                padding-top: 25px;
+                padding-bottom: 10px;
+                @include display-flex(space-between);
+                .img_gallery{
+                    width: 134px;
+
+                    border: 2px solid #dfece6;
+                    margin-bottom: 10px;
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+// SERVICE SECTION END
+

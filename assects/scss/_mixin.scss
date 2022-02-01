@@ -1,0 +1,28 @@
+
+// LAYOUT 
+@mixin  section($background, $height) {
+    width: 100%;
+    height: $height;
+    background: $background;
+}
+
+@mixin  display-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 306.6px);
+    grid-template-rows: 1fr;
+    grid-gap: 20px;
+}
+
+@mixin display-flex($justify-content, $align-items:center) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-wrap: wrap;
+}
+
+@mixin font($font-size, $font-weight, $font-family, $color) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+    font-family: $font-family;
+    color: $color;
+}
