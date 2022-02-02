@@ -424,3 +424,111 @@ body{
 }
 // SERVICE SECTION END
 
+// DOCTOR SECTION START
+.our_doctor_section{
+    @include section(#ffffff, 412px);
+    padding: 25px 0px;
+    .our_doctor_content{
+        @extend .content;
+        .title_header{
+            margin-bottom: 25px;
+            &::after{
+                background: #eaeaea;
+            }
+        }
+        .our_doctors{
+            @include display-grid();
+            .doctor{
+                .doctor_img{
+                    width: 306.6px;
+                    img{
+                        width: 100%;
+                    }
+                }
+                h3{
+                    padding: 5px 0px;
+                    @include font($font-size-18, 600, $Open-Sans-SemiBold, $secend-dark-color); 
+                }
+                p{
+                    @include font(12px, 400, $Open-Sans-Regular, #878787);   
+                }
+                div{
+                    strong{
+                        @include font(12px, 400, $Open-Sans-Regular, $main-color);   
+                    }
+                }
+            }
+        }
+    }
+}
+// DOCTOR SECTION END
+
+// FOOTER SECTION START
+.footer_section{
+    @include section(#222222, 307px);
+    padding: 25px 0px;
+    .footer_content{
+        @extend .content;
+        .f_logo{
+            width: 734px;
+            @include display-flex(start);
+            padding-bottom: 20px;
+            a{
+                width: 80px;
+                margin-right: 14px;
+                img{
+                    width: 100%;
+                    
+               }
+            }
+            h4{
+                @include font($font-size-25, 400, $MYRIADPRO-REGULAR, $secend-light-color);
+
+            }
+            
+        } 
+        .f_items{
+            @include display-grid(4, 1fr);
+
+            .f_item{
+                h3{
+                    @include font($font-size-18, 600, $Open-Sans-Regular, $secend-dark-color);  
+                    padding-bottom: 18px;
+                }
+                ul{
+                    li{
+                        padding: 3px 0px;
+                        a{
+                            color: $white;
+                            font-size: 13px;
+                            text-transform: capitalize;
+                            i{
+                                color: $main-color;
+                            }
+
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+.copy_right{
+    @include section($main-color, 40px);
+    .copy_right_content{
+        @extend .content;
+        height: 40px;
+        @include display-flex(center);
+        
+        p{
+            width: 250px;
+            text-align: center;
+            @include font($font-size-13, 400, $Open-Sans-Regular, $secend-light-color);  
+        }
+    }
+
+}
+
+
+

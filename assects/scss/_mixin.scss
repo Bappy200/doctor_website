@@ -6,9 +6,9 @@
     background: $background;
 }
 
-@mixin  display-grid {
+@mixin  display-grid($col:3, $width:306.6px) {
     display: grid;
-    grid-template-columns: repeat(3, 306.6px);
+    grid-template-columns: repeat($col, $width);
     grid-template-rows: 1fr;
     grid-gap: 20px;
 }

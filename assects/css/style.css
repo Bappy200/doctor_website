@@ -61,7 +61,7 @@ body {
   font-family: Open-Sans-Regular;
 }
 
-.content, .header_top .header_top_content, .main_header .main_header_content, .home_section .home_content, .about_section .about_content, .deperment_section .deperment_content, .service_section .service_content {
+.content, .header_top .header_top_content, .main_header .main_header_content, .home_section .home_content, .about_section .about_content, .deperment_section .deperment_content, .service_section .service_content, .our_doctor_section .our_doctor_content, .footer_section .footer_content, .copy_right .copy_right_content {
   width: 960px;
   margin: 0px auto;
 }
@@ -638,4 +638,160 @@ body {
 
 .service_section .service_content .gallery .image_gallery .img_gallery img {
   width: 100%;
+}
+
+.our_doctor_section {
+  width: 100%;
+  height: 412px;
+  background: #ffffff;
+  padding: 25px 0px;
+}
+
+.our_doctor_section .our_doctor_content .title_header {
+  margin-bottom: 25px;
+}
+
+.our_doctor_section .our_doctor_content .title_header::after {
+  background: #eaeaea;
+}
+
+.our_doctor_section .our_doctor_content .our_doctors {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (306.6px)[3];
+      grid-template-columns: repeat(3, 306.6px);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-gap: 20px;
+}
+
+.our_doctor_section .our_doctor_content .our_doctors .doctor .doctor_img {
+  width: 306.6px;
+}
+
+.our_doctor_section .our_doctor_content .our_doctors .doctor .doctor_img img {
+  width: 100%;
+}
+
+.our_doctor_section .our_doctor_content .our_doctors .doctor h3 {
+  padding: 5px 0px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Open-Sans-SemiBold;
+  color: #215a6d;
+}
+
+.our_doctor_section .our_doctor_content .our_doctors .doctor p {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: Open-Sans-Regular;
+  color: #878787;
+}
+
+.our_doctor_section .our_doctor_content .our_doctors .doctor div strong {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: Open-Sans-Regular;
+  color: #c30911;
+}
+
+.footer_section {
+  width: 100%;
+  height: 307px;
+  background: #222222;
+  padding: 25px 0px;
+}
+
+.footer_section .footer_content .f_logo {
+  width: 734px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+.footer_section .footer_content .f_logo a {
+  width: 80px;
+  margin-right: 14px;
+}
+
+.footer_section .footer_content .f_logo a img {
+  width: 100%;
+}
+
+.footer_section .footer_content .f_logo h4 {
+  font-size: 25.76;
+  font-weight: 400;
+  font-family: MYRIADPRO-REGULAR;
+  color: #3ca2a2;
+}
+
+.footer_section .footer_content .f_items {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  grid-gap: 20px;
+}
+
+.footer_section .footer_content .f_items .f_item h3 {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: Open-Sans-Regular;
+  color: #215a6d;
+  padding-bottom: 18px;
+}
+
+.footer_section .footer_content .f_items .f_item ul li {
+  padding: 3px 0px;
+}
+
+.footer_section .footer_content .f_items .f_item ul li a {
+  color: #fff;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.footer_section .footer_content .f_items .f_item ul li a i {
+  color: #c30911;
+}
+
+.copy_right {
+  width: 100%;
+  height: 40px;
+  background: #c30911;
+}
+
+.copy_right .copy_right_content {
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.copy_right .copy_right_content p {
+  width: 250px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  font-family: Open-Sans-Regular;
+  color: #3ca2a2;
 }
